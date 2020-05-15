@@ -71,12 +71,12 @@ def gameloop():
     
     init_velocity = 5
 
-    with open("/home/abhishek/Desktop/Flappy Bird/hiscore.txt","r+") as f:
+    with open("hiscore.txt","r+") as f:
         hiscore = f.read()
 
     while not exit_game:
         if game_over:
-            with open("/home/abhishek/Desktop/Flappy Bird/hiscore.txt","w") as f:
+            with open("hiscore.txt","w") as f:
                 f.write(str(hiscore))
             gameWindow.fill(black)
             sc_score("Game Over ! Press Enter to Continue ",red ,screen_width/5,screen_height/5)
